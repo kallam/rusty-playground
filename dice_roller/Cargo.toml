@@ -1,0 +1,9 @@
+[package]
+
+name = "dice_roller"
+version = "0.0.1"
+authors = ["Alex Kallam <aakallam@gmail.com>"]
+
+[dependencies]
+
+rand = "0.2.0"
