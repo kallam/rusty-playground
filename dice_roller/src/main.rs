@@ -1,6 +1,6 @@
 extern crate rand;
 
-use std::old_io as io;
+use std::io;
 
 fn main() {
 
@@ -12,10 +12,11 @@ fn main() {
     let mut total = 0;
 
 
-    let mut s = io::stdin().read_line().ok().expect("expected an input string");
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).ok().expect("expected an input string");
     // let s = "3d8 + 1d6";
 
-    s = s.replace("\n", ""); // strip newline from end of input string
+    let s = input.replace("\n", ""); // strip newline from end of input string
 
     for l in s.chars() {
         if l == 'd' {
